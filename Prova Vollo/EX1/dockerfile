@@ -1,0 +1,9 @@
+FROM nginx:latest
+
+WORKDIR /usr/share/nginx/html
+
+COPY index.html .
+
+RUN rm /usr/share/nginx/html/index.html
+
+RUN mv index.html /usr/share/nginx/html/index.html
